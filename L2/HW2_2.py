@@ -1,14 +1,15 @@
-Number_1 = int(input())
+number_1 = int(input())
 
-# splitting the number_1 on the separate digits
-Dg_1 = Number_1 // 10000
-Dg_2 = (Number_1 - Dg_1 * 10000) // 1000
-Dg_3 = (Number_1 - Dg_1 * 10000 - Dg_2 * 1000) // 100
-Dg_4 = (Number_1 - Dg_1 * 10000 - Dg_2 * 1000 - Dg_3 * 100) // 10
-Dg_5 = Number_1 - Dg_1 * 10000 - Dg_2 * 1000 - Dg_3 * 100 - Dg_4 * 10
+rest1, n1 = divmod(number_1, 10)
+rest2, n2 = divmod(rest1, 10)
+rest3, n3 = divmod(rest2, 10)
+rest4, n4 = divmod(rest3, 10)
+rest5, n5 = divmod(rest4, 10)
 
-# changing the digits' order
-print(Dg_5,Dg_4,Dg_3,Dg_2,Dg_1)
+# creating number_2 with returned digits' order
+number_2 = n1 * 10000 + n2 * 1000 + n3 * 100 + n4 * 10 + n5
+print(number_2)
+
 
 
 
