@@ -10,4 +10,3 @@ for el in lst:
         b = lst.pop(a)
         lst.append(b)
 print(lst)
-
