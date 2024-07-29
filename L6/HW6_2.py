@@ -15,7 +15,11 @@ if 0 <= n < 8640000:
         data = f'{days} день, {str(hours).zfill(2)}:{str(mins).zfill(2)}:{str(sec).zfill(2)}'
     elif len(days) == 2 and days[1] == '2' and days != '12':
         data = f'{days} дні, {str(hours).zfill(2)}:{str(mins).zfill(2)}:{str(sec).zfill(2)}'
-    elif days == '2':
+    elif len(days) == 2 and days[1] == '3' and days != '13':
+        data = f'{days} дні, {str(hours).zfill(2)}:{str(mins).zfill(2)}:{str(sec).zfill(2)}'
+    elif len(days) == 2 and days[1] == '4' and days != '14':
+        data = f'{days} дні, {str(hours).zfill(2)}:{str(mins).zfill(2)}:{str(sec).zfill(2)}'
+    elif days == '2' or days == '3' or days == '4':
         data = f'{days} дні, {str(hours).zfill(2)}:{str(mins).zfill(2)}:{str(sec).zfill(2)}'
     else:
         data = f'{days} днів, {str(hours).zfill(2)}:{str(mins).zfill(2)}:{str(sec).zfill(2)}'
